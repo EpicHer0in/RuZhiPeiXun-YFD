@@ -1,2 +1,0 @@
-# RuZhiPeiXun-YFD
-kanyun RuZhiPeiXun
