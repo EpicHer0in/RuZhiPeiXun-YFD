@@ -1,0 +1,470 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kanyun RuZhiPeiXun</title>
+
+
+<style type="text/css">
+	@import url("assets/style/mainPageStyle.css");
+	</style>
+<script>
+	function openContent(evt, contentName) {
+  // 声明所有变量
+  var i, tabcontent, tablinks;
+
+  // 使用class=“tabcontent”获取所有元素并隐藏它们
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // 使用class=“tablinks”获取所有元素并删除类“active”
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // 显示当前选项卡，并向打开该选项卡的按钮添加“活动”类
+  document.getElementById(contentName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</head>
+
+<body>
+	<!-- <div class="topnavbar" style="color: aqua;">
+		<img src="assets/images/it-service.jpg" class="itservicelogo">
+		<a href="#" target="_blank">首页</a>
+		<a href="ms-settings:signinoptions" target="_blank">电脑设备</a>
+		<a href="#" target="_blank">入职短信</a>
+		<a href="#" target="_blank">配置方案</a>
+		<a href="#" target="_blank">人脸采集</a>
+		<a href="#" target="_blank">工作手机卡</a>
+		<a href="#" target="_blank">飞连</a>
+		<a href="https://www.zhenguanyu.com/" target="_blank">小猿之家</a>
+		<a href="https://mail.kanyun.com/" target="_blank">企业邮箱</a>
+		<a href="#" target="_blank">打印机</a>
+		<a href="#" target="_blank">设备确认</a>
+	</div> -->
+		<!-- 选项卡链接 -->
+	<div class="tab">
+		<button class="tablinks" onclick="openContent(event, 'index')">首页</button>
+		<button class="tablinks" onclick="openContent(event, 'computerPreparation')">电脑准备</button>
+		<button class="tablinks" onclick="openContent(event, 'enrollSMS')">入职短信</button>
+		<button class="tablinks" onclick="openContent(event, 'enrollPackages')">配置方案</button>
+		<button class="tablinks" onclick="openContent(event, 'facialRecognition')">人脸采集</button>
+		<button class="tablinks" onclick="openContent(event, 'workSIM')">工作手机卡</button>
+		<button class="tablinks" onclick="openContent(event, 'feilian')">飞连</button>
+		<button class="tablinks" onclick="openContent(event, 'xiaoyuanzhijia')">小猿之家</button>
+		<button class="tablinks" onclick="openContent(event, 'qiyeyouxiang')">企业邮箱</button>
+		<button class="tablinks" onclick="openContent(event, 'printer')">打印机</button>
+		<button class="tablinks" onclick="openContent(event, 'equipmentConfirmation')">设备确认</button>
+		<button class="tablinks" onclick="openContent(event, 'contactUs')">联系我们</button>
+	</div>
+
+	<!-- 选项卡内容 -->
+	<!-- 首页 -->
+	<div id="index" class="tabcontent" style="display:block;">
+		<img src="assets/images/kanyun-logo.png" style="width: 450px; position: absolute; left:50%; top: 40%; margin-left: -215px;margin-top: -140px;">
+		<h2 style="color: #0070C0; text-align: center;font-size: 70px; padding-top: 20%;"> 新员工入职IT培训</h2>
+		<!-- <div style=" position:absolute; bottom: 0px; left: 50%; margin-left: -300px; color: gray;">&copy; Kanyun WuHan ALL RIGHTS RESERVED.</div> -->
+	</div>
+
+	<!-- 电脑设备 -->
+	<div id="computerPreparation" class="tabcontent">
+		<h2>电脑准备-开机密码 <a href="ms-settings:signinoptions" target="_blank">点我去修改密码</a></h2>
+		<div style="font-size: 30px;">用户名：Kanyun</div>
+		<div style="font-size: 30px; display: inline-block;">默认密码：<div class="warn_red">Kykg@2012</div>
+		</div>
+		<div>
+			<table class="detailTable">
+				<tr>
+					<td>密码最长有效期</td>
+					<td><div class="warn_red"> 180天 </div>后，登录时会提示更换新密码</td>
+				</tr>
+				<tr>
+					<td>密码长度要</td>
+					<td>不低于<div class="warn_red">8位</div></td>
+				</tr>
+				<tr>
+					<td>密码强度要求</td>
+					<td>英文大小写+数字（如：Yuanfudao123）</td>
+				</tr>
+			</table>
+			
+			<br>
+			<details>
+				<summary>点击展开修改密码的步骤</summary>
+
+				<table class="stepTable">
+					<tr>
+						<td>1、在页面顶部点击“<div class="warn_red">点我修改密码</div>”:</td>
+					</tr>
+					<tr>
+						<td>2、点击密码选项，点击更改：</td>
+					</tr>
+					<tr>
+						<td><img src="/assets/images/修改密码.png" style="width: 800px;"></td>
+					</tr>
+					<!-- <img src="/assets/images/修改密码.png"> -->
+				</table>
+		
+			</details>
+
+		</div>
+		<div>
+			<div class="warn_red">⚠️注意：</div>
+			<div style="font-size: 30px;">密码不能包含完全的登录名（如登录名叫YFD，则密码不能为Yfd1234）、密码不可与上一次相同</div>
+		</div>
+	</div>
+
+	<!-- 入职短信 -->
+	<div id="enrollSMS" class="tabcontent">
+		<h2>入职短信</h2>
+		<div style="font-size: 30px;">开头为：【猿辅导】你好：<br>
+			主要内容：<br>
+			1、内部账号(<div class="warn_red">LDAP</div>)<br> 
+			2、企业邮箱账号<br>
+			样式：<div class="warn_red">LDAP</div>@kanyun.com<br>
+			密码：<div class="warn_red">YFD#123456</div><br>
+		</div>
+		<div>内部账号与企业邮箱密码是<div class="warn_red">相互独立</div></div>
+		<div>内部账号(LDAP)命名规则：采用入职老师的姓名拼音全拼，如果有相同姓名会在后方加上wh，如果依旧有相同则会在wh后方加上01、02…（例：张三zhangsanwh01@kanyun.com）</div>
+	</div>
+
+	<!-- 配置方案 -->
+	<div id="enrollPackages" class="tabcontent">
+		<h2>设备配置方案</h2>
+		<table class="detailTable">
+			<tr>
+				<td>辅导老师</td>
+				<td>ThinkPad + iPad + 手机 +配件+<div class="warn_red">(显示器有需要找IT领取)</div></td>
+			</tr>
+			<tr>
+				<td>销售中心</td>
+				<td>ThinkPad + iPad + 手机 +配件+<div class="warn_red">(显示器有需要找IT领取)</div>+耳机</td>
+			</tr>
+			<tr>
+				<td>HRBP</td>
+				<td>ThinkPad+手机+插线板</td>
+			</tr>
+		</table>
+		<br>
+		<div class="warn_red">⚠️注意：</div>
+			<div>
+			设备以及配件
+			<div class="warn_red">人为损坏
+			</div>
+			或者
+			<div class="warn_red">遗失
+			</div>
+			需赔付，设备浸液后第一时间关机并擦干表面液体后及时找IT处理，
+			切记不要开机、不要充电、不要继续使用。
+			</div>
+	</div>
+
+	<!-- 人脸采集 -->
+	<div id="facialRecognition" class="tabcontent">
+		<h2>人脸采集</h2>
+		<details>
+			<summary>点击展开上传门禁照片的步骤</summary>
+
+			<table class="stepTable">
+				<tr>
+					<td>1、打开“<div class="warn_red">私人手机上的企业微信</div>”;</td>
+				</tr>
+				<tr>
+					<td>2、在底部导航栏找到工作台，并在其中找到“<div class="warn_red">门禁照片采集</div>”;</td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/门禁照片采集.png" style="width: 250px;"></td>
+				</tr>
+				<!-- <img src="/assets/images/修改密码.png"> -->
+			</table>
+	
+		</details>
+		<br>
+		<div>
+			<div class="warn_red">⚠️注意：<br>
+			1.面部不要有曝光<br>
+			2.眼睛上不要有反光<br>
+			3.不能使用美颜相机<br>
+			</div>
+		</div>
+	</div>
+
+	<!-- 工作手机卡 -->
+	<div id="workSIM" class="tabcontent">
+		<h2>工作手机卡</h2>
+		<div>工作手机卡套餐内容：<br>
+		<div class="warn_red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;武汉联通卡</div>每月套餐60元含：20G全国流量 + 2000分钟国内语音通话。不含短信资费。<br>
+		<div class="warn_red">⚠️注意：</div>公司将对工作手机卡超出手机套餐中流量、短信及增值服务进行收费，请老师合理使用，避免不必要的浪费。（<div class="warn_red">超出套餐的资费，每月会有专人联系您进行补缴</div>）<br>
+		<br>   
+		<div class="tips">温馨提示：<br>
+			   1.每位老师只能拥有一张工作手机卡，如因工作变动需要变更使用人需要联系it过户；<br>
+			   2.禁止发送短信，注册类短信可以发送；<br>
+			   3.请不要自行充值话费，充值的话费无法退还和报销；<br>
+			   4.不要外借他人使用，丢失第一时间联系IT处理；<br>
+			   5.号码无法使用联系it处理即可。<br>
+			</div>
+		</div>
+	</div>
+
+	<!-- 飞连 -->
+	<div id="feilian" class="tabcontent">
+		<h2>飞连 <a href="corplink://" target="_blank">点我打开飞连电脑版</a></h2>
+		<div>注意：登录过程中需要输入企业ID：<div class="warn_red">kanyun</div></div>
+		<br>
+		<details>
+			<summary>点击展开电脑连接公司办公WiFi的步骤</summary>
+
+			<table class="stepTable">
+				<tr>
+					<td>1、检查电脑连接的WiFi是否已连接上：<div class="warn_red">RuZhiPeiXun</div></td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/fl-dn0.png" style="width: 300px;"></td>
+				</tr>
+
+				<tr>
+					<td>2、同意条款并登录</td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/fl-dn2.png" style="width: 300px;"></td>
+				</tr>
+
+				<tr>
+					<td>3、选择右上角二维码折痕，使用<div class="warn_red">企微扫码登录</div></td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/fl-dn3.png" style="width: 300px;"></td>
+				</tr>
+
+				<tr>
+					<td>4、等待浏览器弹出窗口点击“<div class="warn_red">打开CorpLink（飞连）</div>”</td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/fl-dn5.png" style="width: 300px;"></td>
+				</tr>
+
+				<tr>
+					<td>5、登录成功后，选择员工WiFi，点击<div class="warn_red">一键连接</div>,检查电脑连接的WiFi是否切换为：<div class="warn_red">kanyun</div></td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/fl-dn7.png" style="width: 800px;"></td>
+				</tr>
+			</table>
+		</details>
+
+		<br>
+		<details>
+			<summary>点击展开手机连接公司办公WiFi的步骤</summary>
+
+			<table class="stepTable">
+				<tr>
+					<td>1、检查手机连接的WiFi是否已连接上：<div class="warn_red">RuZhiPeiXun</div></td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/fl-sj0.png" style="width: 300px;"></td>
+				</tr>
+				<tr>
+					<td>2、输入企业ID：<div class="warn_red">kanyun</div></td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/fl-sj1.png" style="width: 300px;"></td>
+				</tr>
+				<tr>
+					<td>3、同意条款并登录</td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/fl-sj2.png" style="width: 300px;"></td>
+				</tr>
+				<tr>
+					<td>4、选择右上角二维码折痕，使用<div class="warn_red">企微扫码登录</div></td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/fl-sj3.png" style="width: 300px;"></td>
+				</tr>
+				<tr>
+					<td>5、登录成功后，选择员工WiFi，点击<div class="warn_red">一键连接并给予相应权限</div></td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/fl-sj4.png" style="width: 300px;"></td>
+				</tr>
+				<tr>
+					<td>6、检查手机连接的WiFi是否切换为：<div class="warn_red">kanyun</div></td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/fl-sj5.png" style="width: 300px;"></td>
+				</tr>
+				<!-- <img src="/assets/images/修改密码.png"> -->
+			</table>
+	
+		</details>
+
+		<br>
+
+		<h3>电脑和手机VPN使用声明</h3>
+		<div>
+			如果有远程办公（如：<div class="warn_red">出差、居家办公</div>）的同事需要访问公司内部的网站可使用VPN。<br>
+			VPN连接方法：<br>
+			电脑端：打开飞连-网络-VPN-点击开关-在移动端上确认登录（或输入飞连移动端的令牌）<br>
+			移动端：打开飞连-VPN网络-点击开关<br>
+			<div class="warn_red">注意⚠️：</div>
+			<br>
+			在已连接内网“kanyun”时,切记不要打开“VPN”功能，会使设备出现网络故障，飞连VPN功能只提供访问公司内部网站的权限（<div class="warn_red">不提供上网功能</div>）<br>
+		</div>
+
+	</div>
+
+	<!-- 小猿之家 -->
+	<div id="xiaoyuanzhijia" class="tabcontent">
+		<h2>小猿之家 <a href="https://www.zhenguanyu.com/" target="_blank">点我去小猿之家</a></h2>
+		<div>
+			内部账号“<div class="warn_red">LDAP</div>”是用于登录内部网站如<div class="warn_red">小猿之家</div>、<div class="warn_red">OA</div>、<div class="warn_red">工作后台</div>、<div class="warn_red">飞连</div>等。<br>
+			账号为企业邮箱的前缀，初始密码会以短信或邮件告知员工或申请人。<br>
+		</div>
+		<br>
+		<details>
+			<summary>点击展开修改小猿之家密码的步骤</summary>
+
+			<table class="stepTable">
+				<tr>
+					<td>1、成功登录后在右上角点击<div class="warn_red">小人</div>;</td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/xiaoyuanzhijia.png" style="width: 350px;"></td>
+				</tr>
+				<tr>
+					<td>2、开始修改密码，默认密码在入职短信中，需要大小写加数字八位以上。</td>
+				</tr>
+				
+			</table>
+	
+		</details>
+	</div>
+
+	<!-- 企业邮箱 -->
+	<div id="qiyeyouxiang" class="tabcontent">
+		<h2>企业邮箱 <a href="https://mail.kanyun.com/" target="_blank">点我去企业邮箱</a></h2>
+		<div>
+			第一次登陆请使用<div class="warn_red">账号密码登录</div><br>
+			登录成功之后需要使用<div class="warn_red">私人微信</div>扫描二维码关注企业邮箱公众号<br>
+			<div class="warn_red">注意⚠️：</div><br>
+			登录之后需<div class="warn_red">修改初始密码</div><br>
+		</div>
+
+		<br>
+		<details>
+			<summary>点击展开修改企业邮箱密码的步骤</summary>
+
+			<table class="stepTable">
+				<tr>
+					<td>1、在顶部点击“<div class="warn_red">点我去企业邮箱</div>”;</td>
+				</tr>
+				<tr>
+					<td>2、使用入职短信中的<div class="warn_red">默认邮箱账号和密码登录</div>;</td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/企业邮箱登录.png" style="width: 800px;"></td>
+				</tr>	
+				<tr>
+					<td>3、点击<div class="warn_red">设置</div>、<div class="warn_red">账户</div>、<div class="warn_red">修改密码</div>;</td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/企业邮箱改密码.png" style="width: 800px"></td>
+				</tr>	
+				<tr>
+					<td>4、使用<div class="warn_red">私人微信</div>扫码关注公众号。</td>
+				</tr>			
+			</table>
+	
+		</details>
+		
+		<br>
+		<details>
+			<summary>点击展开企业邮箱绑定私人企业微信的步骤</summary>
+
+			<table class="stepTable">
+				<tr>
+					<td>1、打开手机企业微信;</td>
+				</tr>
+				<tr>
+					<td>2、在底部导航栏找到<div class="warn_red">邮件</div>;</td>
+				</tr>
+				<tr>
+					<td>3、输入刚刚修改的企业邮箱密码;</td>
+				</tr>
+				<tr>
+					<td>4、能看到邮箱内的邮件即绑定成功。</td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/企业邮箱绑定企微.png" style="width: 350px;"></td>
+				</tr>				
+			</table>
+	
+		</details>
+	</div>
+
+	<!-- 打印机 -->
+	<div id="printer" class="tabcontent">
+		<h2>打印机 <a href="https://www.zhenguanyu.com/#/printer" target="_blank">点我去查看公司打印机布局</a></h2>
+		<div style="font-size: 30px;">
+			<div class="warn_red">注意⚠️：</div><br>
+			发放的工作电脑已经<div class="warn_red">预装好了</div>打印机驱动程序，可无需自行再次安装。<br>
+		</div>
+	</div>
+
+	<!-- 设备确认 -->
+	<div id="equipmentConfirmation" class="tabcontent">
+		<h2>设备确认</h2>
+		<div style="font-size: 30px;">
+			<div class="warn_red">注意⚠️：</div><br>
+			所有发放的设备以及配件都需要当场<div class="warn_red">签字确认</div>。<br>
+		</div>
+		<br>
+		<details>
+			<summary>点击展开设备签字确认的步骤</summary>
+
+			<table class="stepTable">
+				<tr>
+					<td>1、打开手机企业微信，在底部导航栏找到<div class="warn_red">工作台</div>，找到<div class="warn_red">资产系统</div>;</td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/确认签字.png" style="width: 350px;"></td>
+				</tr>	
+				<tr>
+					<td>2、在资产系统中选择<div class="warn_red">领用待确认</div>;</td>
+				</tr>
+				<tr></tr>
+					<td><img src="/assets/images/确认签字1.png" style="width: 350px;"></td>
+				</tr>
+				<tr>
+					<td>3、认真细致检查发放的<div class="warn_red">主设备编码与系统是否一致</div>，<div class="warn_red">配件是否齐全</div>，确认后，<div class="warn_red">勾选所有待确认资产</div>，<div class="warn_red">签字</div>;</td>
+				</tr>
+				<tr>
+					<td><img src="/assets/images/确认签字2.png" style="width: 350px;"></td>
+				</tr>			
+			</table>
+	
+		</details>
+	</div>
+
+	<!-- 联系我们 -->
+	<div id="contactUs" class="tabcontent">
+		<h2>联系我们</h2>
+		<ul style="list-style-type: none;">
+			<li>看云企微搜索</li>
+			<li><div class="warn_red" style="font-size: 40px;">武汉IT-晴川</div></li>
+			<li>或直接拨打IT服务热线:  <div class="tips" style="font-size: 35px;">400-004-6680</div></li>
+			<li><div class="tips" style="font-size: 35px;">IT工作时间</div></li>
+			<li><div class="tips" style="font-size: 35px;">周一至周五 9 : 30--21 : 00<br>
+				周末  13:00--21:00</div></li>
+			<li>人事/行政</li>
+			<li>周一至周五 9:30--18:30</li>
+		</ul>
+	</div>
+
+</body>
+</html>

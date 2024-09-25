@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>学籍管理系统</title>
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
+    <link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="vendors/styles/welcome.css">
+    <script src="vendors/scripts/jquery.min.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="header-left"></div>
+    <div class="header-right">
+        <div class="dashboard-setting user-notification">
+            <div class="dropdown" id="login_user" style="font-size: 19px;color: #ea0b0b;cursor: pointer"></div>
+        </div>
+        <div class="user-notification">
+            <div class="dropdown" id="sign_out">
+                <a style="font-size: 16px;color: #0e0e0e;cursor: pointer" href="login.html">退出登录</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="left-side-bar">
+    <div class="brand-logo">
+        <a href="personal-center.html">
+            学籍管理系统
+        </a>
+        <div class="close-sidebar" data-toggle="left-sidebar-close">
+            <i class="ion-close-round"></i>
+        </div>
+    </div>
+    <div class="menu-block customscroll">
+        <div class="sidebar-menu">
+            <ul id="accordion-menu">
+                <li class="dropdown">
+                    <a href="javascript:;" class="dropdown-toggle">
+                        <span class="micon dw dw-house-1"></span><span class="mtext">首页</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="welcome.html">首页</a></li>
+                        <li><a href="personal-center.html">个人中心</a></li>
+                        <li><a href="change-pass.html">修改密码</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:;" class="dropdown-toggle">
+                        <span class="micon dw dw-edit2"></span><span class="mtext">功能</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="course-information.html">课程信息</a></li>
+                        <!--                        <li><a href="student-information.html">学籍信息</a></li>-->
+                        <li><a href="score-inquiry.html">成绩查询</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" id="jurisdiction">
+                    <a href="javascript:;" class="dropdown-toggle">
+                        <span class="micon dw dw-copy"></span><span class="mtext">管理</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="course-manage.html">课程管理</a></li>
+                        <li><a href="student-manage.html">学籍管理</a></li>
+                        <li><a href="score-manage.html">成绩管理</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="mobile-menu-overlay"></div>
+
+<div class="main-container">
+    <div class="welcome_center">
+        <span class="title">首页/欢迎</span>
+    </div>
+    <div class="welcome_content">
+        <div class="content">
+            欢迎访问系统
+        </div>
+    </div>
+</div>
+<!-- js -->
+<script src="vendors/scripts/core.js"></script>
+<script src="vendors/scripts/script.min.js"></script>
+<script src="vendors/layer/layer.js"></script>
+<script src="vendors/scripts/axios.min.js"></script>
+<script src="vendors/scripts/jquery.md5.js"></script>
+<script>
+    var URL = 'http://localhost:3600/'
+    var welcome_data = {
+        $login_user: $('#login_user'),
+        $sign_out: $('#sign_out'),
+        $jurisdiction: $('#jurisdiction'),
+    }
+
+    /**权限**/
+    if(localStorage.getItem('user')!='admin'){
+        welcome_data.$jurisdiction.hide()
+    }else {
+        welcome_data.$jurisdiction.show()
+    }
+    if (localStorage.getItem('user')) {
+        welcome_data.$login_user.text(localStorage.getItem('user'))
+    }
+    //退出登录
+    welcome_data.$sign_out.on('click', function () {
+        if (localStorage.getItem('user')) {
+            localStorage.removeItem('user')
+        }
+        if (localStorage.getItem('user_num')) {
+            localStorage.removeItem('user_num')
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+$(document).ready(function(){
+		$("#slider").Xslider({
+			affect:'scrollx',
+			speed:10,
+			space:6000,
+			auto:true,
+			trigger:'mouseover',
+			conbox: '.conbox',
+			ctag:'div',
+			switcher:'.switcher',
+			stag:'a',
+			current:'cur',
+			rand:false
+		})
+		$("#slider2").Xslider({
+			affect:'scrolly',
+			ctag:'div',
+			speed:10,
+		})
+		$("#slider3").Xslider({
+			affect:'fade',
+			ctag:'div',
+		})
+		$("#slider4").Xslider({
+			affect:'none',
+			ctag:'div',
+			speed:10
+		})
+	})
